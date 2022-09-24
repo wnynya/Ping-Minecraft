@@ -1,0 +1,23 @@
+{
+  "name": "ping-minecraft",
+  "version": "1.0.0",
+  "description": "A minecraft server ping & query tool",
+  "author": "Wany <sung@wany.io> (https://wany.io)",
+  "main": "index.mjs",
+  "keywords": [
+    "ping",
+    "minecraft",
+    "cli"
+  ],
+  "homepage": "https://github.com/wnynya/ping-minecraft#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wnynya/ping-minecraft.git"
+  },
+  "scripts": {
+    "ping": "node index.mjs"
+  },
+  "dependencies": {
+    "minecraft-protocol": "^1.36.1"
+  }
+}
