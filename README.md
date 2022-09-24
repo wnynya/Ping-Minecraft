@@ -110,7 +110,7 @@ favicon : 512 chars
 ### ping
 
 ```js
-ping(host, port, options);
+ping(host, port, options); //return Promise
 ```
 
 host: `string [host]`<br>
