@@ -1,4 +1,4 @@
-import ping from './src/ping.mjs';
+import ping from './ping.mjs';
 export default ping;
 export { ping };
 
@@ -31,7 +31,7 @@ if (process.argv.length > 2) {
     }
   }
 
-  console.log('Running ping-minecraft at', new Date(), '\n');
+  console.log('Running Ping-Minecraft at', new Date(), '\n');
 
   console.log('target  :', q);
   dnsServer ? console.log('dns     :', dnsServer) : null;

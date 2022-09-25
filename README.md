@@ -1,4 +1,4 @@
-# ping-minecraft
+# Ping-Minecraft
 
 A minecraft server ping & query tool
 
@@ -23,8 +23,25 @@ npm i ping-minecraft
 
 Code
 
+ESM
+
 ```js
 import ping from 'ping-minecraft';
+
+// Ping localhost:25565
+ping('localhost')
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    throw err;
+  });
+```
+
+CJS
+
+```js
+const ping = require('ping-minecraft').default;
 
 // Ping localhost:25565
 ping('localhost')
