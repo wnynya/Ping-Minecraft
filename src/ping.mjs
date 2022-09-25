@@ -1,14 +1,3 @@
-/**
- * ping-minecraft
- *
- * ping.mjs
- *
- * (c) 2022 Wany
- *
- * @summary Minecraft server ping
- * @author Wany <sung@wany.io>
- */
-
 import { ips } from '@wanyne/dns';
 import IP from '@wanyne/ip';
 import mp from 'minecraft-protocol';
