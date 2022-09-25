@@ -9,8 +9,8 @@
  * @author Wany <sung@wany.io>
  */
 
-import IP from './ip.mjs';
-import ips from './ips.mjs';
+import { ips } from '@wanyne/dns';
+import IP from '@wanyne/ip';
 import mp from 'minecraft-protocol';
 
 /**

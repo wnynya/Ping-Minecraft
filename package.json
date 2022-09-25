@@ -1,6 +1,6 @@
 {
   "name": "ping-minecraft",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A minecraft server ping & query tool",
   "author": "Wany <sung@wany.io> (https://wany.io)",
   "main": "lib/index.js",
@@ -23,6 +23,8 @@
     "babel": "npx babel src --out-file-extension .js --out-dir lib"
   },
   "dependencies": {
+    "@wanyne/dns": "^1.1.2",
+    "@wanyne/ip": "^1.0.0",
     "minecraft-protocol": "^1.36.1"
   },
   "devDependencies": {
