@@ -1,5 +1,5 @@
 /**
- * ping-port
+ * ping-minecraft
  *
  * ips.mjs
  *
@@ -28,7 +28,11 @@ async function ips(host, server) {
   }
 }
 
-async function a(domain, timeout = 2000, server) {
+async function a(
+  domain,
+  timeout = 2000,
+  server = ['1.1.1.1', '8.8.8.8', '8.8.4.4']
+) {
   let result = {
     error: undefined,
     type: 'dns/a',
@@ -44,7 +48,7 @@ async function a(domain, timeout = 2000, server) {
       result.records = ['127.0.0.1'];
       resolve(result);
     } else {
-      dns.setServers(server ? [server] : []);
+      dns.setServers(server ? [server] : ['1.1.1.1', '8.8.8.8', '8.8.4.4']);
       dns
         .resolve4(domain)
         .then((records) => {
@@ -62,7 +66,11 @@ async function a(domain, timeout = 2000, server) {
   });
 }
 
-async function aaaa(domain, timeout = 2000, server) {
+async function aaaa(
+  domain,
+  timeout = 2000,
+  server = ['1.1.1.1', '8.8.8.8', '8.8.4.4']
+) {
   let result = {
     error: undefined,
     type: 'dns/aaaa',
@@ -77,7 +85,7 @@ async function aaaa(domain, timeout = 2000, server) {
     if (domain.toLowerCase() == 'localhost') {
       resolve(result);
     } else {
-      dns.setServers(server ? [server] : []);
+      dns.setServers(server ? [server] : ['1.1.1.1', '8.8.8.8', '8.8.4.4']);
       dns
         .resolve6(domain)
         .then((records) => {
