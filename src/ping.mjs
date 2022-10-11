@@ -1,4 +1,4 @@
-import { ips } from '@wanyne/dns';
+import dns from '@wanyne/dns';
 import IP from '@wanyne/ip';
 import mp from 'minecraft-protocol';
 
@@ -39,9 +39,8 @@ async function ping(host, port = 25565, options = {}) {
   host = host.toLowerCase();
   result.host = host;
 
-  const ipsa = await ips(host, dnsServer);
-  const ip = ipsa?.[0];
-  result.ip = ip;
+  const ips = await dns.ips(host, dnsServer);
+  result.ip = ips[0];
 
   if (filterBogon && new IP(ip).isBogon()) {
     result.error = 'EBOGONIP';

@@ -1,6 +1,5 @@
 import ping from './ping.mjs';
 export default ping;
-export { ping };
 
 if (process.argv.length > 2) {
   const q = process.argv[2];
